@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Example</title>
+</head>
+<body>
+
+    <button id="Job-btn">Click Me</button>
+
+    <script>
+        let clickCount = 0; // ক্লিক ট্র্যাক করতে ভেরিয়েবল
+
+        document.getElementById("Job-btn").addEventListener("click", function() {
+            clickCount++; // প্রতিবার ক্লিক হলে কাউন্ট বাড়বে
+
+            if (clickCount === 1) {
+                alert("Congrat!!! You have all task completed"); // প্রথম ক্লিকে এলার্ট
+            } else if (clickCount === 2) {
+                alert("Board updated Successfully"); // দ্বিতীয়বার ক্লিকে এলার্ট
+                this.disabled = true; // বাটন ডিজেবল হবে
+            }
+        });
+    </script>
+
+</body>
+</html>
