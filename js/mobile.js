@@ -42,3 +42,14 @@ container.appendChild(p);
     
   }
 });
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll

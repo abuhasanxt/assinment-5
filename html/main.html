@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Click Example</title>
-</head>
-<body>
-
-    <button id="Job-btn">Click Me</button>
-
-    <script>
-        let clickCount = 0; // ক্লিক ট্র্যাক করতে ভেরিয়েবল
-
-        document.getElementById("Job-btn").addEventListener("click", function() {
-            clickCount++; // প্রতিবার ক্লিক হলে কাউন্ট বাড়বে
-
-            if (clickCount === 1) {
-                alert("Congrat!!! You have all task completed"); // প্রথম ক্লিকে এলার্ট
-            } else if (clickCount === 2) {
-                alert("Board updated Successfully"); // দ্বিতীয়বার ক্লিকে এলার্ট
-                this.disabled = true; // বাটন ডিজেবল হবে
-            }
-        });
-    </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="container mx-auto bg-slate-100 p-1">
+    <header>
+      <nav class="flex justify-between items-center bg-white p-1">
+        <div class="flex items-center gap-1">
+          <img src="/assets/logo.png" alt="" />
+          <h1 class="text-2xl font-semibold">
+            Dev<span class="text-3xl font-bold">Board</span>
+          </h1>
+        </div>
+        <a href="/html/index.html">
+          <button class="btn bg-blue-700 text-xl font-semibold text-white">
+            Back toDesk
+          </button></a
+        >
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 class="text-2xl font-bold text-center">Blogs</h1>
+        <h1 class="text-xl font-bold bg-white text-nowrap p-1">
+          Question-1: what are the different ways to select an element in the
+          DOM?
+        </h1>
+        <p class="bg-white my-1 p-1">1.getElementById 2.getElementsByClassName 3.getElementsByTagName 4.querySelector 5.querySelectorAll</p>
+      </section>
+      <section class="my-6">
+        <h1 class="text-xl font-bold bg-white text-nowrap p-1">
+          Question-2: what is the difference between InnerHTML, InnerText and textContent?
+        </h1>
+        <p class="bg-white my-1 p-1">
+            1.innerHTML একটি এলিমেন্টের HTML কোডসহ সমস্ত কনটেন্ট পরিবর্তন করতে পারে  2. InnerText
+            একটি এলিমেন্টের শুধুমাত্র text  পরিবর্তন করতে পারে।  3.textContentসমস্ত টেক্সট রিটার্ন করে, এমনকি হিডেন টেক্সটও অন্তর্ভুক্ত থাকে।</p>
+      </section>
+      <section>
+        <h1 class="text-xl font-bold bg-white text-nowrap p-1">
+          Question-3: what is even delegation in the DOM?
+        </h1>
+        <p class="bg-white my-1 p-1">
+            event delegation হলো JavaScript-এর একটি কার্যকরী কৌশল যেখানে আমরা কোনো নির্দিষ্ট এলিমেন্টের পরিবর্তে তার প্যারেন্ট এলিমেন্টে ইভেন্ট লিসেনার অ্যাটাচ করি।</p>
+      </section>
+      <section class="my-6">
+        <h1 class="text-xl font-bold bg-white text-nowrap p-1">
+          Question-4: what is event bubbling in the DOM?
+        </h1>
+        <p class="bg-white my-1 p-1">Event Bubbling হলো JavaScript-এর একটি ইভেন্ট প্রোপাগেশন মেকানিজম, যেখানে কোনো চাইল্ড এলিমেন্টে event ট্রিগার হলে সেটি তার প্যারেন্ট এবং উপরের সব প্যারেন্ট এলিমেন্টেও ছড়িয়ে যায় ।</p>
+      </section>
+    </main>
+  </body>
 </html>
